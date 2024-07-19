@@ -2,13 +2,17 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import MainContainer from './pages/MainContainer';
+import AddRestaurant from './pages/AddRestaurant';
+import ListRestaurants from './pages/ListRestaurants';
+import EditRestaurant from './pages/EditRestaurant';
 
 const App = () => (
   <BrowserRouter>
     <Header />
     <Routes>
-      <Route path="/" element={<MainContainer />} />
+      <Route path="/" element={<ListRestaurants />} />
+      <Route path="/add" element={<AddRestaurant />} />
+      <Route path="/edit/:id" element={<EditRestaurant />} />
     </Routes>
   </BrowserRouter>
 );

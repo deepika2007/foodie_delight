@@ -46,6 +46,9 @@
   justify-content: center;
   align-items: center;
 }
+.MuiButtonBase-root {
+  text-transform: capitalize !important;
+}
 
 /* list card css */
 .restaurant_name {

@@ -27,6 +27,17 @@ mock.onPut(new RegExp('/api/restaurants/*')).reply(config => {
 // mock api for get restaurant
 mock.onGet('/api/restaurants').reply(200, restaurants);
 
+// mock api for get restaurant by ID
+mock.onGet(new RegExp('/api/restaurants/*')).reply(config => {
+    const id = parseInt(config.url.split('/').pop());
+    const restaurant = restaurants.find(restaurant => restaurant?.id === id);
+    if (restaurant) {
+        return [200, restaurant];
+    } else {
+        return [400, { message: 'Restaurant not found' }];
+    }
+});
+
 // mock api for update restaurant
 mock.onDelete(new RegExp('/api/restaurants/*')).reply(config => {
     const id = parseInt(config.url.split('/').pop());
