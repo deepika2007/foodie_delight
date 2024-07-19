@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+/* global css */
+.d-flex {
+  display: flex;
+}
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* list card css */
+.restaurant_name {
+  font-weight: 700 !important;
+  font-size: 23px !important;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.restaurant_description {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.restaurant_text {
+  background-color: #2f8d46;
+  background-image: url("./assests/images/img4.jpg");
+  /* background-repeat: repeat; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 200px;
+  font-size: 40px !important;
+  text-align: center;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  font-weight: 700 !important;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-buttons {
+  display: none;
+  position: absolute;
+  top: 8px !important;
+  right: 8px !important;
+  z-index: 1;
+}
+.action_icon {
+  padding: 8px;
+  background-color: #ed6c02 !important;
+  color: white;
+  margin: 3px;
+  font-size: 30px !important;
+  border-radius: 5px;
+  cursor: pointer;
+}
