@@ -16,7 +16,7 @@ const EditRestaurant = () => {
   //  Get Restaurant data according to ID
   const fetchData = async () => {
     const response = await fetchById(id);
-    if (response?.status == 200) {
+    if (response?.status===200) {
       setInitialValues(response.data);
     } else {
       navigate("/");
@@ -26,7 +26,7 @@ const EditRestaurant = () => {
   // Edit Restaurant Data
   const handleSubmit = async (values) => {
     const data = await update(values);
-    if (data?.status == 200) {
+    if (data?.status===200) {
       navigate("/");
     }
   };

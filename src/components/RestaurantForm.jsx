@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { TextField, Button, Grid, Box } from "@mui/material";
+import { TextField, Button, Grid } from "@mui/material";
 
 const RestaurantForm = ({ initialValues, onSubmit }) => {
   const validationSchema = Yup.object({

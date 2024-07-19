@@ -11,7 +11,7 @@ const AddRestaurant = () => {
   // add restaurant data
   const handleSubmit = async (values) => {
     const data = await add(values);
-    if (data?.status == 200) {
+    if (data?.status===200) {
       navigate("/");
     }
   };
